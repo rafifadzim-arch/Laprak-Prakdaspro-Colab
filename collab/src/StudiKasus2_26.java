@@ -16,18 +16,16 @@ public class StudiKasus2_26 {
                 || jenis.equalsIgnoreCase("MANDIRI");
         boolean pkm = jenis.equalsIgnoreCase("PKM");
 
-        // Data hanya diminta sesuai jenis kegiatan
+        
         if (lomba) {
             System.out.print("Jumlah dokumen : ");
             int dokumen = risqi.nextInt();
             System.out.print("Peringkat juara : ");
             int juara = risqi.nextInt();
 
-            // Tingkat 1: lomba
-            if (juara >= 1 && juara <= 3) { 
-                // Tingkat 2: juara 1-3
+        if (juara >= 1 && juara <= 3) { 
+                
                 if (dokumen >= 4) { 
-                // Tingkat 3: dokumen lengkap
                     System.out.println("Status : Dokumen lengkap. Dana penghargaan diberikan.");
                 } else {
                     System.out.println("Status : Dokumen tidak lengkap (kurang "
@@ -42,12 +40,10 @@ public class StudiKasus2_26 {
             System.out.print("Status pendanaan PKM (1 = lolos, 0 = tidak lolos) : ");
             int status = risqi.nextInt();
 
-            // Tingkat 1: PKM
             if (status == 1) {                               
-                // Tingkat 2: lolos pendanaan
+                
                 if (dokumen >= 4) {                          
-                // Tingkat 3: dokumen lengkap
-                    System.out.println("Status : Dokumen lengkap. Dana penghargaan diberikan.");
+                 System.out.println("Status : Dokumen lengkap. Dana penghargaan diberikan.");
                 } else {
                     System.out.println("Status : Dokumen tidak lengkap (kurang "
                             + (4 - dokumen) + " dokumen). Dana penghargaan tidak diberikan.");
